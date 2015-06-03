@@ -14,29 +14,6 @@
 -(instancetype)initWithStartNumber:(NSNumber *)startNumber endNumber:(NSNumber *)endNumber
 {
     self = [super init];
-    if (self) {
-        NSUInteger startInt = [startNumber intValue];
-        NSUInteger   endInt = [endNumber intValue];
-        
-        for (NSUInteger i = startInt; i < endInt; i++) {
-            NSMutableString *fizzBuzzOutput = [@"" mutableCopy];
-            
-            if ((i%3 == 0) && (i%5 == 0)) {
-                fizzBuzzOutput = [@"FizzBuzz" mutableCopy];
-            } else if (i%3 == 0) {
-                fizzBuzzOutput = [@"Fizz" mutableCopy];
-            } else if (i%5 == 0) {
-                fizzBuzzOutput = [@"Buzz" mutableCopy];
-            } else {
-                fizzBuzzOutput = [NSMutableString stringWithFormat:@"%lu",(unsigned long)i];
-            }
-            
-            NSLog(@"%@", fizzBuzzOutput);
-        }
-        
-        
-    }
-    
     return self;
 }
 
@@ -51,6 +28,27 @@
     return self;
 }
 
-
+- (NSArray *)getValuesBetweenNumber:(NSNumber *)startNumber andNumber:(NSNumber *)endNumber
+{
+    NSUInteger startInt = [startNumber intValue];
+    NSUInteger   endInt = [endNumber intValue];
+    
+    for (NSUInteger i = startInt; i < endInt; i++) {
+        NSMutableString *fizzBuzzOutput = [@"" mutableCopy];
+        
+        if ((i%3 == 0) && (i%5 == 0)) {
+            [fizzBuzzOutput appendString:@"FizzBuzz"];
+        } else if (i%3 == 0) {
+            [fizzBuzzOutput appendString:@"Fizz"];
+        } else if (i%5 == 0) {
+            [fizzBuzzOutput appendString:@"Buzz"];
+        } else {
+            [fizzBuzzOutput appendString:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
+        }
+        
+        NSLog(@"%@", fizzBuzzOutput );
+    }
+    
+}
 
 @end

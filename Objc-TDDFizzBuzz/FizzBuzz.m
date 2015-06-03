@@ -32,23 +32,24 @@
 {
     NSUInteger startInt = [startNumber intValue];
     NSUInteger   endInt = [endNumber intValue];
+    NSMutableArray *fizzBuzzOutput = [[NSMutableArray alloc] init];
     
-    for (NSUInteger i = startInt; i < endInt; i++) {
-        NSMutableString *fizzBuzzOutput = [@"" mutableCopy];
-        
+    for (NSUInteger i = startInt; i <= endInt; i++) {
         if ((i%3 == 0) && (i%5 == 0)) {
-            [fizzBuzzOutput appendString:@"FizzBuzz"];
+            [fizzBuzzOutput addObject:@"FizzBuzz"];
         } else if (i%3 == 0) {
-            [fizzBuzzOutput appendString:@"Fizz"];
+            [fizzBuzzOutput addObject:@"Fizz"];
         } else if (i%5 == 0) {
-            [fizzBuzzOutput appendString:@"Buzz"];
+            [fizzBuzzOutput addObject:@"Buzz"];
         } else {
-            [fizzBuzzOutput appendString:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
+            [fizzBuzzOutput addObject:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
         }
-        
-        NSLog(@"%@", fizzBuzzOutput );
     }
     
+    if ([startNumber isEqual:@0]) {
+        fizzBuzzOutput[0] = @"0";
+    };
+    return fizzBuzzOutput;
 }
 
 @end

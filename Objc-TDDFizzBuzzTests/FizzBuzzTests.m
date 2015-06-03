@@ -18,8 +18,7 @@ describe(@"Fizz Buzz Tests", ^{
     beforeEach(^{
         fizzBuzz = [[FizzBuzz alloc] init];
         defaultFizzBuzz = [[FizzBuzz alloc] init];
-        designatedFizzBuzz = [[FizzBuzz alloc] initWithStartNumber:@0
-                                                         endNumber:@15];
+        designatedFizzBuzz = [[FizzBuzz alloc] initWithStartNumber:@0 endNumber:@15];
     });
     
 #pragma mark - Test 1
@@ -51,7 +50,7 @@ describe(@"Fizz Buzz Tests", ^{
     
 #pragma mark - Test 6
     it(@"Should replace appropriate values with Fizz, Buzz, and FizzBuzz", ^{
-        expect([FizzBuzzgetValuesBetweenNumber:@0andNumber:@15]).to.equal(@[@"0",@"1",@"2",@"Fizz",@"4",@"Buzz",@"Fizz",@"7",@"8",@"Fizz",@"Buzz", @"11", @"Fizz", @"13", @"14", @"FizzBuzz"]);
+        expect([fizzBuzz getValuesBetweenNumber:@0 andNumber:@15]).to.equal(@[@"0",@"1",@"2",@"Fizz",@"4",@"Buzz",@"Fizz",@"7",@"8",@"Fizz",@"Buzz", @"11", @"Fizz", @"13", @"14", @"FizzBuzz"]);
 
     });
     

@@ -65,7 +65,7 @@ You could also rewrite `FizzBuzz *fizzBuzz = [[FizzBuzz alloc] init]; ` in each 
 #Test 6
 1. Write a test that asserts that the array returned from `[FizzBuzz getValuesBetweenNumber:@0 andNumber:@15]` is equivalent to `@[@"0",@"1",@"2",@"Fizz",@"4",@"Buzz",@"Fizz",@"7",@"8",@"Fizz",@"Buzz", @"11", @"Fizz", @"13", @"14", @"FizzBuzz"]` .
 2. Run your test! (It won't compile)**Red**
-3. Implement the `- (NSArray *)getValuesBetweenNumber:(NSNumber *)startNumber andNumber:(NSNumber)endNumber;` method and run your test. **Green**
+3. Implement the `- (NSArray *)getValuesBetweenNumber:(NSNumber *)startNumber andNumber:(NSNumber *)endNumber;` method and run your test. **Green**
 
 
 
